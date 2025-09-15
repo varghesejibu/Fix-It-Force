@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix It Force — Book a Service</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+   <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="index.html" aria-label="Fix It Force Home">
+      <img src="assets/images/logo.jpg" alt="Fix It Force logo" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="login.html">Login</a>
+      <a class="btn btn-primary" href="signup.html">Join as a Worker</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" data-hamburger>☰</button>
+  </header>
+  <!-- MULTI STEP FORM -->
+  <section class="section">
+    <div class="container">
+      <h2>Book a Service</h2>
+      <div id="progressbar">
+        <span class="step active">1</span>
+        <span class="step">2</span>
+        <span class="step">3</span>
+        <span class="step">4</span>
+      </div>
+
+      <form id="bookingForm">
+        
+        <!-- STEP 1 -->
+        <fieldset>
+          <h3>Step 1: Choose Service</h3>
+          <select name="service" required>
+            <option value="">-- Select a Service --</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Mason</option>
+            <option>Painter</option>
+            <option>Installation</option>
+            <option>Tools & Spare Parts</option>
+          </select>
+          <button type="button" class="btn btn-primary next">Next</button>
+        </fieldset>
+
+        <!-- STEP 2 -->
+        <fieldset>
+          <h3>Step 2: Enter Location</h3>
+          <input type="text" name="address" placeholder="Your Address" required />
+          <input type="text" name="city" placeholder="City" required />
+          <input type="text" name="pincode" placeholder="Pincode" required />
+          <button type="button" class="btn btn-ghost prev">Back</button>
+          <button type="button" class="btn btn-primary next">Next</button>
+        </fieldset>
+
+        <!-- STEP 3 -->
+        <fieldset>
+          <h3>Step 3: Enter Details</h3>
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <textarea name="notes" placeholder="Describe your issue"></textarea>
+          <button type="button" class="btn btn-ghost prev">Back</button>
+          <button type="button" class="btn btn-primary next">Next</button>
+        </fieldset>
+
+        <!-- STEP 4 -->
+        <fieldset>
+          <h3>Step 4: Review & Confirm</h3>
+          <p>Check your details before confirming booking.</p>
+          <div id="review"></div>
+          <button type="button" class="btn btn-ghost prev">Back</button>
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </fieldset>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+   
+
+  <script src="../assets/js/multistep.js"></script>
+</body>
+</html>
